@@ -25,10 +25,11 @@ const {
     {/* Theme detection script - runs before paint to prevent flash */}
     <script is:inline>
       (function() {
-        const saved = localStorage.getItem('theme');
+        const saved = localStorage.getItem('theme') || 'auto';
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = saved || (prefersDark ? 'dark' : 'light');
-        document.documentElement.classList.add(theme);
+        const effectiveTheme = saved === 'auto' ? (prefersDark ? 'dark' : 'light') : saved;
+        document.documentElement.setAttribute('data-theme', saved);
+        document.documentElement.classList.add(effectiveTheme);
       })();
     </script>
   </head>

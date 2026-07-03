@@ -44,33 +44,7 @@
   --transition-slow: 350ms ease;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #64748b;
-
-    --border-color: #334155;
-    --border-color-hover: #475569;
-
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
-
-    --nav-bg: rgba(15, 23, 42, 0.8);
-    --nav-border: rgba(51, 65, 85, 0.8);
-
-    --code-bg: #1e293b;
-    --code-text: #f8fafc;
-  }
-}
-
-/* Dark mode class override (for manual toggle) */
+/* Dark Mode — only via html.dark class */
 html.dark {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
@@ -92,10 +66,6 @@ html.dark {
 
   --code-bg: #1e293b;
   --code-text: #f8fafc;
-}
-
-html.light {
-  /* Light mode is default, no overrides needed */
 }
 
 /* ===================================
