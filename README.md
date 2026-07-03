@@ -1,43 +1,78 @@
-# Astro Starter Kit: Minimal
+<p align="center">
+  <img src="public/logo.svg" alt="CapsuleX Logo" width="120">
+</p>
 
-```sh
-npm create astro@latest -- --template minimal
+<h1 align="center">CapsuleX</h1>
+
+<p align="center">
+  A minimal, modern blog theme for Astro with capsule floating navigation.
+</p>
+
+<p align="center">
+  <a href="https://github.com/wangjacks/capsule-x">GitHub</a>
+</p>
+
+---
+
+## Features
+
+- 🎯 **Capsule Floating Navigation** — Glassmorphism nav bar with backdrop blur
+- 🌗 **Tri-State Theme** — Auto (follow device) / Light / Dark
+- ⚡ **Fast** — Static generation with Astro, zero client JS by default
+- 📝 **MDX Support** — Write content with Markdown + JSX components
+- 🏷️ **Tag System** — Filter posts by tags
+- 📱 **Responsive** — Mobile-first design
+- 🔍 **Search Ready** — Pagefind integration (coming soon)
+- 📊 **Mermaid Diagrams** — Render diagrams in your posts (coming soon)
+
+## Getting Started
+
+```bash
+npm create astro@latest -- --template your-username/capsule-x
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Or add to an existing project:
 
-## 🚀 Project Structure
+```bash
+npm install capsule-x
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
-```text
-/
-├── public/
+```
+capsule-x/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/       # UI components
+│   ├── layouts/          # Page layouts
+│   ├── content/
+│   │   └── blog/         # Blog posts (Markdown)
+│   ├── pages/            # Route pages
+│   └── styles/           # Global CSS
+├── public/               # Static assets
+└── docs/                 # Project documentation
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Configuration
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Create `src/config.ts` to customize your site:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```ts
+export const siteConfig = {
+  title: 'Your Blog',
+  description: 'Your blog description',
+  author: 'Your Name',
+  // ...
+};
+```
 
-## 🧞 Commands
+## Development
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run dev       # Start dev server
+npm run build     # Build for production
+npm run preview   # Preview production build
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## License
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Apache 2.0](LICENSE)
