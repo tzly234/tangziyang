@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import { getCollection, render } from 'astro:content';
 import { siteConfig } from '../config';
+import { estimateReadingTime } from '../utils/readingTime';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -16,6 +17,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+const readingTime = estimateReadingTime(post.body || '');
 ---
 
 <BaseLayout title={post.data.title + ' - ' + siteConfig.title}>
@@ -27,6 +29,8 @@ const { Content, headings } = await render(post);
         <h1>{post.data.title}</h1>
         <div class="post-meta">
           <time>{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          <span class="meta-sep">·</span>
+          <span class="reading-time">{readingTime} min read</span>
           {post.data.tags.length > 0 && (
             <div class="post-tags">
               {post.data.tags.map(tag => (
@@ -89,9 +93,22 @@ const { Content, headings } = await render(post);
   .post-meta {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: var(--text-tertiary);
+    gap: 0.5rem;
     font-size: 0.875rem;
+    flex-wrap: wrap;
+  }
+
+  .post-meta time,
+  .reading-time {
+    color: var(--text-tertiary);
+  }
+
+  .meta-sep {
+    color: var(--border-color-hover);
+  }
+
+  .reading-time {
+    white-space: nowrap;
   }
 
   .post-tags {
