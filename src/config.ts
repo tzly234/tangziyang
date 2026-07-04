@@ -32,6 +32,7 @@ export const siteConfig = {
   // Feature toggles
   features: {
     readingProgress: true,  // Show reading progress bar on post pages
+    backToTop: true,        // Show back to top button
   },
 };
 

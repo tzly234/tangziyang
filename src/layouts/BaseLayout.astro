@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { siteConfig } from '../config';
 import { ClientRouter } from 'astro:transitions';
+import BackToTop from '../components/BackToTop.astro';
 
 interface Props {
   title?: string;
@@ -49,5 +50,6 @@ const {
   </head>
   <body>
     <slot />
+    {siteConfig.features?.backToTop && <BackToTop />}
   </body>
 </html>

@@ -116,9 +116,13 @@ const tocHeadings = headings.filter(h => h.depth >= 2 && h.depth <= 3);
     .toc-mobile {
       display: block;
       position: fixed;
-      bottom: 4.5rem;
+      bottom: 1rem;
       right: 1rem;
       z-index: 900;
+    }
+
+    .toc-mobile.animate {
+      transition: bottom var(--transition-normal);
     }
 
     .toc-toggle {
