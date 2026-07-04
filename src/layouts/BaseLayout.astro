@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { siteConfig } from '../config';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title?: string;
@@ -22,6 +23,8 @@ const {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <ClientRouter />
 
     {/* Theme detection script - runs before paint to prevent flash */}
     <script is:inline>

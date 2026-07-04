@@ -32,7 +32,7 @@ const readingTime = estimateReadingTime(post.body || '');
   <Navigation />
   {siteConfig.features?.readingProgress && <ReadingProgress />}
 
-  <main class="post-layout" style="padding-top: 6rem;">
+  <main class="post-layout" style="padding-top: 6rem;" transition:name="main">
     <article class="post">
       <header class="post-header">
         <h1>{post.data.title}</h1>
