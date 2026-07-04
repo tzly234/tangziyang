@@ -34,10 +34,6 @@
   --nav-backdrop: blur(12px);
   --nav-border: rgba(226, 232, 240, 0.8);
 
-  /* Code */
-  --code-bg: #f1f5f9;
-  --code-text: #0f172a;
-
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
@@ -67,8 +63,7 @@ html.dark {
   --nav-bg: rgba(15, 23, 42, 0.8);
   --nav-border: rgba(51, 65, 85, 0.8);
 
-  --code-bg: #1e293b;
-  --code-text: #f8fafc;
+
 }
 
 /* ===================================
@@ -134,15 +129,13 @@ p {
 
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: var(--code-bg);
-  color: var(--code-text);
+  background-color: var(--bg-tertiary);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.875em;
 }
 
 pre {
-  background-color: var(--code-bg);
   padding: 1rem;
   border-radius: 8px;
   overflow-x: auto;
