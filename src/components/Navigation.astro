@@ -15,7 +15,27 @@ import { siteConfig } from '../config';
 
     <div class="nav-links">
       {siteConfig.nav.map(link => (
-        <a href={link.href} class="nav-link">{link.title}</a>
+        <a href={link.href} class="nav-link">
+          {link.title === 'Home' && (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          )}
+          {link.title === 'About' && (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          )}
+          {link.title === 'Tags' && (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+          )}
+          <span>{link.title}</span>
+        </a>
       ))}
     </div>
 
@@ -55,9 +75,27 @@ import { siteConfig } from '../config';
   </div>
 
   <div class="mobile-menu" id="mobile-menu">
-    <a href="/" class="mobile-link">Home</a>
-    <a href="/about" class="mobile-link">About</a>
-    <a href="/tags" class="mobile-link">Tags</a>
+    <a href="/" class="mobile-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="/about" class="mobile-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>About</span>
+    </a>
+    <a href="/tags" class="mobile-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+        <line x1="7" y1="7" x2="7.01" y2="7"/>
+      </svg>
+      <span>Tags</span>
+    </a>
   </div>
 </nav>
 
@@ -104,6 +142,9 @@ import { siteConfig } from '../config';
   }
 
   .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
     color: var(--text-secondary);
     font-size: 0.875rem;
     font-weight: 500;
@@ -191,6 +232,9 @@ import { siteConfig } from '../config';
   }
 
   .mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--text-secondary);
     font-size: 0.875rem;
     font-weight: 500;
