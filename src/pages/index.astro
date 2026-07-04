@@ -169,17 +169,21 @@ const posts = (await getCollection('blog'))
 </style>
 
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: '0px 0px -60px 0px', threshold: 0 }
-  );
+  function initHomePage() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -60px 0px', threshold: 0 }
+    );
 
-  document.querySelectorAll('.post-item').forEach(el => observer.observe(el));
+    document.querySelectorAll('.post-item').forEach(el => observer.observe(el));
+  }
+
+  document.addEventListener('astro:page-load', initHomePage);
 </script>
