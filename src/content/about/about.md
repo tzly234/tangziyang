@@ -3,20 +3,16 @@ title: "About"
 description: "About Me"
 ---
 
-# ZiYang Tang (汤子洋)
+## ZiYang Tang (汤子洋)
 **企业数字化转型顾问 / AI 产品负责人**
+Email: djtannng@gmail.com
+Phone: 13476126137
+WeChat: tzyves
+Portfolio: [www.deallab.tech](http://www.deallab.tech)
 
----
 
-### 联系方式
-- **Email:** djtannng@gmail.com
-- **Phone:** 13476126137
-- **WeChat:** tzyves
-- **Portfolio:** [www.deallab.tech](http://www.deallab.tech)
+#### 个人简介
 
----
-
-### 个人简介
 拥有10年以上互联网产品及企业数字化经验，覆盖电商交易、供应链、零售 SaaS 及企业应用领域。曾负责复杂业务系统升级、供应链产品建设及多业态 SaaS 平台从0到1落地，具备业务流程梳理、产品架构设计和跨团队项目推进能力。
 
 近年来专注于 AI 在企业场景中的应用探索，包括智能知识库、业务流程自动化和企业效率工具设计，探索数字化与 AI 技术在企业业务流程中的结合方式，帮助企业提升运营效率和组织协作能力。
