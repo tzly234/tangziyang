@@ -3,10 +3,10 @@
 
 export const siteConfig = {
   // Site title — displayed in nav, footer, and page titles
-  title: 'CapsuleX',
+  title: 'tangziyang',
 
   // Site description — used in meta tags and hero section
-  description: 'A minimal blog theme with capsule design',
+  description: 'makes your business intellegient',
 
   // Author name — used in footer and meta author tag
   author: 'wangjacks',
